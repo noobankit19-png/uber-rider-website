@@ -31,6 +31,7 @@ header {{
     padding:20px 40px;
     display:flex;
     justify-content:space-between;
+    align-items:center;
 }}
 
 header h1 {{
@@ -106,6 +107,11 @@ function calculateRoute() {{
     const drop = document.getElementById("drop").value;
     const rideType = document.getElementById("rideType").value;
 
+    if (!pickup || !drop) {{
+        alert("Please enter pickup and drop locations");
+        return;
+    }}
+
     let pricePerKm = 12;
 
     if (rideType === "Bike") {{
@@ -135,7 +141,7 @@ function calculateRoute() {{
                     "Rate: ₹" + pricePerKm + "/km<br>" +
                     "<b>Estimated Fare: ₹" + price.toFixed(2) + "</b>";
             }} else {{
-                alert("Could not calculate route.");
+                alert("Route not found. Check API or location.");
             }}
         }}
     );
@@ -195,8 +201,8 @@ def about():
     return page("""
     <div class="hero">
         <h2>About Uber Rider</h2>
-        <p>Professional ride booking system built with Python Flask 
-        and Google Maps integration with dynamic pricing.</p>
+        <p>Professional ride booking system built using Python Flask 
+        with Google Maps and dynamic pricing.</p>
     </div>
     """)
 
