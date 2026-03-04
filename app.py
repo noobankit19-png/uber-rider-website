@@ -11,7 +11,7 @@ def page(content):
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Uber Rider - Professional Ride Booking</title>
 
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDC8Nw6oPaeuKsu-nRXTjg6Mz6xgTKxaPc&libraries=places"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=-nRXTjg6Mz6xgTKxaPc&libraries=places"></script>
 
 <style>
 * {{
